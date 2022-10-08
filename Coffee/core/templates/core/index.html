@@ -1,0 +1,42 @@
+{% extends 'core/base/base.html'%}
+
+{% load static %}
+
+{% block main %}
+
+<form method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        {% csrf_token %}
+        <!-- <label for="{{ form.upload_image.id_for_label }}"> Upload</label> -->
+
+        <div class="row mt-3">
+            <div class="col-sm">
+                
+            </div>
+            <div class="col-sm text-left">
+                {{ form.upload_image }}
+                <label class="custom-file-label" for="{{ form.upload_image.id_for_label }}">Choose Image</label>
+            </div>        
+            <div class="col-sm">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                
+            </div>
+            <div class="col-sm">
+                <input class="btn btn-primary btn-block mt-3" type="submit" value="Upload" /></p>
+            </div>
+            <div class="col-sm">
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</form>
+
+
+{% endblock %}
